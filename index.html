@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(./images/sss.jpg);
+            background-size: cover;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .forms {
+            border-radius: 10px;
+            margin: 10% 30% 10% 30%;
+            background-color: transparent;
+            padding: 3%;
+        }
+
+        input {
+            border-color: white;
+            height: 40px;
+            width: 150px;
+            border: none !important;
+            font-weight: 600;
+            font-size: 1rem;
+            color: rgb(0, 0, 0);
+            padding-left: 3%;
+            border-radius: 20px;
+
+        }
+
+        input {
+            border-top-style: none;
+            border-right-style: none;
+            border-left-style: none;
+            border-bottom-style: none;
+            background-color: white;
+        }
+
+
+        input:focus {
+            outline: none;
+        }
+
+        .btn-submit {
+            background-color: rgb(223, 44, 44);
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            height: 40px;
+            width: 200px;
+            border: none;
+            padding: 1% 3% 2% 3%;
+            margin-left: 8%;
+            border-radius: 30px;
+        }
+
+        .btn-submit:hover {
+            background-color: rgb(206, 19, 38);
+            color: white !important;
+        }
+
+        .textfont {
+            color: rgb(0, 0, 0);
+            font-size: 1.3rem;
+            font-weight: 600;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h1>Love  calculater</h1>
+            <div class="col-xs-12">
+                <div class="forms">
+                    <form>
+                        <input type="text" placeholder="Your name" id="female" class="form-control ">
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input type="text" placeholder="Your lover name" id="male" class="form-control "><br><br>
+                        <!-- <button class="btn btn-submit" onclick="love()">Submit</button><br><br> -->
+                        <input class=" btn-submit form-control" type="button" onclick="love()" Value="Love score"><br><br>
+                        <p class="textfont"> &nbsp; <span id="check"></span></p>
+                    </form>
+                    <div>
+                        <img src="./images/s.svg" height="100px" width="300px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function love() {
+            a = document.getElementById("female").value;
+            b = document.getElementById("male").value;
+            c = document.getElementById("check").innerHTML = Math.floor(Math.random() * (99));
+            if (c <= 50) {
+                document.getElementById("check").innerHTML = " Your love score is " + c + "%. Work on your Relationship";
+            }
+            else if (c > 50 && c <= 80) {
+                document.getElementById("check").innerHTML = " Your love score is " + c + "%. A Healthy Relationship";
+            }
+            else {
+                document.getElementById("check").innerHTML = " Your love score is " + c + "%. Made for each other";
+
+            }
+        }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+`
